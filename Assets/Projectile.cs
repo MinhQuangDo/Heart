@@ -32,6 +32,7 @@ public class Projectile : MonoBehaviour
             Enemy e = other.gameObject.GetComponent<Enemy>();
             e.TakeDamage(1);
         }
-        DestroyProjectile();
+        if(other.gameObject.tag != "Player")
+            DestroyProjectile();
     }
 }
