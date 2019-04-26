@@ -470,7 +470,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 73029455}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.65, y: -0.9, z: 0}
+  m_LocalPosition: {x: -4.65, y: -0.9, z: -1}
   m_LocalScale: {x: 2.3, y: 2.3, z: 1}
   m_Children:
   - {fileID: 1520499905}
@@ -542,9 +542,9 @@ GameObject:
   - component: {fileID: 388960712}
   - component: {fileID: 388960711}
   - component: {fileID: 388960710}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -557,7 +557,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 388960708}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.08, y: -0.64, z: 0}
+  m_LocalPosition: {x: -5.08, y: -0.64, z: -1}
   m_LocalScale: {x: 2.3, y: 2.3, z: 1}
   m_Children:
   - {fileID: 1630518518}
@@ -746,7 +746,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 501330692}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: AttackPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -63189,7 +63189,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 995108864}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: CeilingCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -63692,7 +63692,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1630518518}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
