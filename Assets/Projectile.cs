@@ -29,8 +29,24 @@ public class Projectile : MonoBehaviour
         if(other.gameObject.tag == "Enemy")
         {
             CameraShaker.Instance.ShakeOnce(1f, 4f, 0.1f, 0.1f);
-            Enemy e = other.gameObject.GetComponent<Enemy>();
-            e.TakeDamage(1);
+            WallEnemyAI e = other.GetComponent<WallEnemyAI>();
+            NEnemy e2 = other.GetComponent<NEnemy>();
+            FlyEnemy e3 = other.GetComponent<FlyEnemy>();
+            if (e)
+            {
+                CameraShaker.Instance.ShakeOnce(1f, 4f, 0.1f, 0.1f);
+                e.TakeDamage(1);
+            }
+            if (e2)
+            {
+                CameraShaker.Instance.ShakeOnce(1f, 4f, 0.1f, 0.1f);
+                e2.TakeDamage(1);
+            }
+            if (e3)
+            {
+                CameraShaker.Instance.ShakeOnce(1f, 4f, 0.1f, 0.1f);
+                e3.TakeDamage(1);
+            }
         }
         if(other.gameObject.tag != "Player")
             DestroyProjectile();

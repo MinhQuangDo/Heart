@@ -17,12 +17,10 @@ public class EnemyAttack : MonoBehaviour
         //Setting up the references
         player = GameObject.FindGameObjectWithTag("Player");
         playerHealth = player.GetComponent<CharacterHealth>();
-        //attackAnimator = GetComponent<Animator>();
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("collide");
         //If the entering collider is the player
         if (other.gameObject == player)
         {
@@ -43,6 +41,18 @@ public class EnemyAttack : MonoBehaviour
 
     void Update()
     {
+        player = GameObject.Find("Player");
+        
+        if (!player)
+        {
+            player = GameObject.Find("Player_2");
+            playerHealth = player.GetComponent<CharacterHealth>();
+        }
+        else
+        {
+            playerHealth = player.GetComponent<CharacterHealth>();
+        }
+
         timer += Time.deltaTime;
         if (timer >= timeBetweenAttacks && playerInRange)
         {
@@ -55,6 +65,5 @@ public class EnemyAttack : MonoBehaviour
         // Reset the timer
         timer = 0f;
         playerHealth.TakeDamage(attackDamage);
-        Debug.Log("Player has been attacked");
     }
 }
