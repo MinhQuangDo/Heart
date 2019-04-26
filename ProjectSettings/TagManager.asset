@@ -4,7 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
+<<<<<<< HEAD
   - Ground
+=======
+>>>>>>> ff1a9077826b615f9b7c9bc73a6ecded034e4009
   - Enemy
   layers:
   - Default
