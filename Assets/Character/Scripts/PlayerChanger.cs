@@ -38,7 +38,7 @@ public class PlayerChanger : MonoBehaviour
                 player_2.SetActive(true);
                 player_1.SetActive(false);
 
-                player_2.GetComponent<CharacterHealth>().currentHealth = player_1.GetComponent<CharacterHealth>().currentHealth;
+                player_2.GetComponent<CharacterHealth>().health = player_1.GetComponent<CharacterHealth>().health;
 
                 CameraShaker.Instance.ShakeOnce(1f, 4f, 0.1f, 0.1f);
 
@@ -54,7 +54,7 @@ public class PlayerChanger : MonoBehaviour
                 player_1.SetActive(true);
                 player_2.SetActive(false);
 
-                player_1.GetComponent<CharacterHealth>().currentHealth = player_2.GetComponent<CharacterHealth>().currentHealth;
+                player_1.GetComponent<CharacterHealth>().health = player_2.GetComponent<CharacterHealth>().health;
 
                 CameraShaker.Instance.ShakeOnce(1f, 4f, 0.1f, 0.1f);
 

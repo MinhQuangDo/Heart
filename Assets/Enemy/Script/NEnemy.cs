@@ -11,7 +11,6 @@ public class NEnemy : MonoBehaviour
     private Animator animator;
     Rigidbody2D rb;
 
-    public int type;
     public float T;
     public int health = 3;
     public float speed = 10f;
@@ -28,10 +27,7 @@ public class NEnemy : MonoBehaviour
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         horizontalMove = -1 * speed;
-        if(type == 2)
-        {
-            Flip();
-        }
+        Flip();
     }
 
     void Update()
@@ -83,7 +79,6 @@ public class NEnemy : MonoBehaviour
     {
         Move(horizontalMove * Time.deltaTime);
     }
-
 
     public void TakeDamage(int damage)
     {

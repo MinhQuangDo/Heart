@@ -81,7 +81,6 @@ public class SceneLoader : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Time.timeScale = 1;
-        Debug.Log(collision);
         if(collision.gameObject.tag == "Player")
         {
             SceneManager.LoadScene(NextSceneName);
