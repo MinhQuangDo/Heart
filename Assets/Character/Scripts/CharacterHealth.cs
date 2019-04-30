@@ -14,6 +14,7 @@ public class CharacterHealth : MonoBehaviour
     private void Start()
     {
         health = maxHealth;
+        // DontDestroyOnLoad(health);
     }
 
     private void Update()
@@ -33,7 +34,7 @@ public class CharacterHealth : MonoBehaviour
             {
                 hearts[i].sprite = emptyHearts;
             }
-            
+
             if(i < maxHealth)
             {
                 hearts[i].enabled = true;
