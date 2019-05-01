@@ -11,33 +11,35 @@ public class FlyEnemy : MonoBehaviour
     private Animator animator;
     Rigidbody2D rb;
 
-    public int type;
     public float T;
     public int health = 3;
     public float speed = 10f;
     Vector2 horizontalMove;
     private float dazedTime;
     public float startDazedTime;
+    float x = 0;
 
     void Start()
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
-        horizontalMove = new Vector2(-1 * speed, 0);
-        if (type == 2)
-        {
-            Flip();
-        }
+        horizontalMove = new Vector2(speed, 0);
     }
 
     void Update()
     {
         if (dazedTime <= 0)
         {
-            speed = 10;
+            if (x != 0)
+            {
+                speed = x;
+                x = 0;
+            }
         }
         else
         {
+            if (x == 0)
+                x = speed;
             speed = 0;
             dazedTime -= Time.deltaTime;
         }
