@@ -28814,7 +28814,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 10
-  startTimeBtwShot: 3
+  startTimeBtwShot: 4
   projectile: {fileID: 9045533769037193375, guid: eb72b10c442339247b3efda053ec2bfb,
     type: 3}
   shotPoint: {fileID: 577429315}
@@ -31534,7 +31534,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 5
-  startTimeBtwShot: 5
+  startTimeBtwShot: 6
   projectile: {fileID: 9045533769037193375, guid: eb72b10c442339247b3efda053ec2bfb,
     type: 3}
   shotPoint: {fileID: 1730853149}

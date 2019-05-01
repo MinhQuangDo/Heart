@@ -47,6 +47,10 @@ public class Enemy_Boss : MonoBehaviour
 
         if (health <= 0)
         {
+          for (int i = 0; i < hearts.Length; i++)
+          {
+            hearts[i].sprite = emptyHearts;
+          }
             animator.SetBool("Dead", true);
             if(GameObject.Find("Boss"))
                 StartCoroutine(boss1End());

@@ -772,7 +772,7 @@ MonoBehaviour:
   T: 2
   health: 10
   speed: 10
-  startDazedTime: 0
+  startDazedTime: 0.5
   att: 0
   startTimeBtwAttack: 0
 --- !u!95 &204690676
@@ -63004,7 +63004,7 @@ MonoBehaviour:
   T: 2
   health: 10
   speed: 10
-  startDazedTime: 0
+  startDazedTime: 0.5
   att: 0
   startTimeBtwAttack: 0
 --- !u!95 &296789987
@@ -63386,7 +63386,7 @@ MonoBehaviour:
   T: 2
   health: 10
   speed: 10
-  startDazedTime: 0
+  startDazedTime: 0.5
   att: 0
   startTimeBtwAttack: 0
 --- !u!95 &377872323
@@ -64283,7 +64283,7 @@ MonoBehaviour:
   T: 2
   health: 10
   speed: 10
-  startDazedTime: 0
+  startDazedTime: 0.5
   att: 0
   startTimeBtwAttack: 0
 --- !u!95 &727410249
@@ -64468,9 +64468,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_MovementSmoothing: 0.05
   T: 0
-  health: 6
+  health: 4
   speed: 20
-  startDazedTime: 0
+  startDazedTime: 0.5
 --- !u!70 &742821943
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -66375,9 +66375,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_MovementSmoothing: 0.05
   T: 0
-  health: 6
+  health: 4
   speed: 20
-  startDazedTime: 0
+  startDazedTime: 0.5
 --- !u!70 &1323859843
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -67108,9 +67108,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_MovementSmoothing: 0.05
   T: 0
-  health: 6
+  health: 4
   speed: 20
-  startDazedTime: 0
+  startDazedTime: 0.5
 --- !u!70 &1575719441
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

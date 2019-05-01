@@ -10,6 +10,11 @@ public class MainMene : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
+    public void playGameHard()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 8);
+    }
+
     public void QuitGame()
     {
         Debug.Log("Quit");

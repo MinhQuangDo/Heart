@@ -375,9 +375,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_MovementSmoothing: 0.05
   T: 0
-  health: 6
+  health: 4
   speed: 20
-  startDazedTime: 0
+  startDazedTime: 0.5
 --- !u!70 &115899362
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -2878,7 +2878,7 @@ MonoBehaviour:
   T: 2
   health: 10
   speed: 10
-  startDazedTime: 0
+  startDazedTime: 0.5
   att: 0
   startTimeBtwAttack: 0
 --- !u!95 &1016951128
