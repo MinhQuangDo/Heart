@@ -64,6 +64,6 @@ public class EnemyAttack : MonoBehaviour
     {
         // Reset the timer
         timer = 0f;
-        playerHealth.TakeDamage(attackDamage);
+        playerHealth.TakeDamage(attackDamage, transform.position);
     }
 }
