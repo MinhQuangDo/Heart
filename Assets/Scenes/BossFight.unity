@@ -28846,6 +28846,7 @@ MonoBehaviour:
   controller: {fileID: 1446124885}
   animator: {fileID: 1446124883}
   runSpeed: 40
+  alive: 1
 --- !u!114 &1446124885
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28971,7 +28972,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1446124881}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.08, y: 0.11, z: 0}
+  m_LocalPosition: {x: -5.08, y: 0.11, z: -1}
   m_LocalScale: {x: 2.3, y: 2.3, z: 1}
   m_Children:
   - {fileID: 1428643190}
@@ -29162,6 +29163,7 @@ MonoBehaviour:
   controller: {fileID: 1637192258}
   animator: {fileID: 1637192256}
   runSpeed: 40
+  alive: 1
 --- !u!114 &1637192258
 MonoBehaviour:
   m_ObjectHideFlags: 0

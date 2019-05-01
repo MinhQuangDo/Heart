@@ -8,10 +8,12 @@ public class SceneLoader : MonoBehaviour
     public string CurrentSceneName;
     public string NextSceneName;
     // public string MainMenuName = "Main Menu";
+    [SerializeField] private GameObject Player;
 
     // Start is called before the first frame update
     void Start()
     {
+      Player = GameObject.FindGameObjectWithTag("Player");
         // GameObject findScene = GameObject.FindGameObjectWithTag("LoadScene");
         // if(CurrentSceneName == "")
         // {
@@ -90,6 +92,16 @@ public class SceneLoader : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+      // if(col.gameObject.tag == "Player")
+      // {
+      //     PlayerMovement playerAvatar;
+      //     playerAvatar = Player.GetComponent<PlayerMovement>();
+      //     if(playerAvatar.alive) {
+      //         playerAvatar.Die();
+      //     }
+      //     // Item box should destroy itself post collision
+      //     // LevelManager.SendMessage("Restart");
+      //     SceneManager.LoadScene(CurrentSceneName);
+      // }
     }
 }
