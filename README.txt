@@ -1,5 +1,3 @@
 -   The health got reset to max when u pass a stage
--   The camera does not shake when u hit the fighter and the bat
--   The fighter and bat do not stop when they got hit by u
--   After u r damaged by the monsters u should be pushed back a little bit
 -   Boss AI needs to be implemented
+-   Enemy Health Bar

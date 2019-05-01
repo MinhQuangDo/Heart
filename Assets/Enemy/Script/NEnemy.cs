@@ -15,29 +15,34 @@ public class NEnemy : MonoBehaviour
     public int health = 3;
     public float speed = 10f;
     float horizontalMove = 0f;
-    private float dazedTime;
+    float dazedTime;
     public float startDazedTime;
-
     public int att = 0;
     private float timeBtwAttack;
     public float startTimeBtwAttack;
+    float x = 0;
 
     void Start()
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
-        horizontalMove = -1 * speed;
-        Flip();
+        horizontalMove = speed;
     }
 
     void Update()
     {
         if (dazedTime <= 0)
         {
-            speed = 10;
+            if(x != 0 )
+            {
+                speed = x;
+                x = 0;
+            }
         }
         else
         {
+            if (x == 0)
+                x = speed;
             speed = 0;
             dazedTime -= Time.deltaTime;
         }
@@ -72,8 +77,9 @@ public class NEnemy : MonoBehaviour
         {
             timeBtwAttack -= Time.deltaTime;
         }
-    }
 
+        horizontalMove = speed;
+    }
 
     private void FixedUpdate()
     {
@@ -90,7 +96,8 @@ public class NEnemy : MonoBehaviour
 
     void Move(float move)
     {
-        Vector3 targetVelocity = new Vector2(move * 10f, rb.velocity.y);
+        Vector3 targetVelocity;
+        targetVelocity = new Vector2(move * 10f, rb.velocity.y);
         rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
 
         GameObject p = GameObject.Find("Player");
@@ -103,7 +110,7 @@ public class NEnemy : MonoBehaviour
             if (m_FacingRight)
             {
                 Flip();
-                horizontalMove = Mathf.Abs(horizontalMove);
+                speed = Mathf.Abs(speed);
             }
         }
         else if (p.transform.position.x + 10 > rb.transform.position.x && p.transform.position.x < rb.transform.position.x)
@@ -111,14 +118,14 @@ public class NEnemy : MonoBehaviour
             if (!m_FacingRight)
             {
                 Flip();
-                horizontalMove = -1 * Mathf.Abs(horizontalMove);
+                speed = -1 * Mathf.Abs(speed);
             }
         }
         else if (T <= 0)
         {
             Flip();
             T = 10;
-            horizontalMove = -1 * horizontalMove;
+            speed = -10;
         }
     }
 
