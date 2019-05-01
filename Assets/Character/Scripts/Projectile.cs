@@ -26,6 +26,22 @@ public class Projectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        GameObject boss = GameObject.Find("Boss");
+        GameObject boss2 = GameObject.Find("Boss2");
+        if (boss || boss2)
+        {
+            if(other.gameObject.tag == "Player")
+            {
+                CharacterHealth player = other.GetComponent<CharacterHealth>();
+                if(player)
+                {
+                    CameraShaker.Instance.ShakeOnce(1f, 4f, 0.1f, 0.1f);
+                    player.TakeDamage(1);
+                    DestroyProjectile();
+                }
+            }
+        }
+
         if(other.gameObject.tag == "Enemy")
         {
             CameraShaker.Instance.ShakeOnce(1f, 4f, 0.1f, 0.1f);
@@ -48,7 +64,7 @@ public class Projectile : MonoBehaviour
                 e3.TakeDamage(1);
             }
         }
-        if(other.gameObject.tag != "Player")
+        if(other.gameObject.tag != "Player" && other.gameObject.tag != "Boss")
             DestroyProjectile();
     }
 }
