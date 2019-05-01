@@ -134,7 +134,7 @@ public class Enemy_Boss : MonoBehaviour
 
     IEnumerator boss1End()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1f);
         Destroy(gameObject);
         boss2.SetActive(true);
     }

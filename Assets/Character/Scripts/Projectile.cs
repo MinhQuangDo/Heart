@@ -36,7 +36,7 @@ public class Projectile : MonoBehaviour
                 if(player)
                 {
                     CameraShaker.Instance.ShakeOnce(1f, 4f, 0.1f, 0.1f);
-                    player.TakeDamage(1);
+                    player.TakeDamage(1, transform.position);
                     DestroyProjectile();
                 }
             }
