@@ -1,3 +1,3 @@
 -   The health got reset to max when u pass a stage
--   After u r damaged by the monsters u should be pushed back a little bit
 -   Boss AI needs to be implemented
+-   Enemy Health Bar

@@ -39,6 +39,8 @@ public class PlayerAttack : MonoBehaviour
                     WallEnemyAI e = enemiesToDamage[i].GetComponent<WallEnemyAI>();
                     NEnemy e2 = enemiesToDamage[i].GetComponent<NEnemy>();
                     FlyEnemy e3 = enemiesToDamage[i].GetComponent<FlyEnemy>();
+                    Enemy_Boss eb = enemiesToDamage[i].GetComponent<Enemy_Boss>();
+
                     if (e)
                     {
                         CameraShaker.Instance.ShakeOnce(1f, 4f, 0.1f, 0.1f);
@@ -53,6 +55,11 @@ public class PlayerAttack : MonoBehaviour
                     {
                         CameraShaker.Instance.ShakeOnce(1f, 4f, 0.1f, 0.1f);
                         e3.TakeDamage(damage);
+                    }
+                    if(eb)
+                    {
+                        CameraShaker.Instance.ShakeOnce(1f, 4f, 0.1f, 0.1f);
+                        eb.TakeDamage(damage);
                     }
                 }
 
