@@ -118,14 +118,14 @@ public class NEnemy : MonoBehaviour
             if (!m_FacingRight)
             {
                 Flip();
-                speed = -1 * Mathf.Abs(speed);
+                speed = -1 * speed;
             }
         }
         else if (T <= 0)
         {
             Flip();
             T = 10;
-            speed = -10;
+            speed = -1 *  speed;
         }
     }
 

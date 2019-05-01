@@ -29,11 +29,11 @@ public class WallEnemyAI : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(originPoint.position, dir, range);
         if (hit == true)
         {
-            if (hit.collider.CompareTag("Ground"))
+            if (hit.collider.CompareTag("Ground") || hit.collider.CompareTag("Enemy"))
             {
                 Flip();
                 speed *= -1;
-                dir *= -1; 
+                dir *= -1;
             }
         }
 
