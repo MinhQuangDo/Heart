@@ -7,12 +7,12 @@ public class Winning : MonoBehaviour
 {
     public void playAgain()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 5);
     }
 
     public void BacktoMenu()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 9);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 12);
     }
 
     public void QuitGame()
