@@ -14,7 +14,9 @@ public class CharacterHealth : MonoBehaviour
 
     public Animator animator;
     private Rigidbody2D rb;
+    [SerializeField] private string curScene;
     private void Start()
+
     {
         health = maxHealth;
 
@@ -49,42 +51,41 @@ public class CharacterHealth : MonoBehaviour
             }
         }
 
-
-        if(health == 0)
+        if (health == 0)
         {
-            //GameObject p = GameObject.Find("Player");
-            //PlayerMovement pm = p.GetComponent<PlayerMovement>();
-            //if (!p)
-            //{
-            //    p = GameObject.Find("Player_2");
-            //}
-            //pm.Die();
-            //animator.SetBool("Dead", true);
-            //rb.velocity = Vector2.zero;
-
-            //StartCoroutine(wait());
-        }
-    }
-
-    public void TakeDamage(int damage, Vector3 position)
-    {
-        if(health > 0)
-        {
-            health -= damage;
             GameObject p = GameObject.Find("Player");
             if (!p)
             {
                 p = GameObject.Find("Player_2");
             }
-            rb = p.GetComponent<Rigidbody2D>();
+            animator.SetBool("Dead", true);
             PlayerMovement pm = p.GetComponent<PlayerMovement>();
-            if (health == 0)
-            {
-                animator.SetBool("Dead", true);
-                pm.alive = false;
-                StartCoroutine(wait());
-            }
+            pm.alive = false;
+            StartCoroutine(wait());
+        }
+    }
 
+    public void TakeDamage(int damage, Vector3 position)
+    {
+        health -= damage;
+        GameObject p = GameObject.Find("Player");
+        if (!p)
+        {
+            p = GameObject.Find("Player_2");
+        }
+
+        //if (health == 0)
+        //{
+        //  animator.SetBool("Dead", true);
+        //  PlayerMovement pm = p.GetComponent<PlayerMovement>();
+        //  pm.alive = false;
+        //  StartCoroutine(wait());
+        //}
+
+        if (health > 0)
+        {
+
+            rb = p.GetComponent<Rigidbody2D>();
             if (position.x > rb.transform.position.x)
                 rb.AddForce(Vector2.left * 1500);
             //p.transform.position = Vector2.Lerp(p.transform.position, new Vector2(p.transform.position.x - 3, p.transform.position.y), 0.25f);
@@ -103,9 +104,9 @@ public class CharacterHealth : MonoBehaviour
 
     IEnumerator wait()
     {
-        yield return new WaitForSeconds(0.6f);
+        yield return new WaitForSeconds(0.5f);
         animator.SetBool("death", true);
         yield return new WaitForSeconds(1f);
-        SceneManager.LoadScene("Tutorial");
+        SceneManager.LoadScene(curScene);
     }
 }

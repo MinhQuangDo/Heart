@@ -27,6 +27,10 @@ public class PlayerMovement : MonoBehaviour
             StartCoroutine(jumpAnimation());
         }
       }
+      else
+      {
+        horizontalMove = 0;
+      }
     }
 
     void FixedUpdate()
