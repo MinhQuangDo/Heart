@@ -150,7 +150,7 @@ public class Enemy_Boss : MonoBehaviour
         yield return new WaitForSeconds(1f);
         Debug.Log("destroyed");
         Destroy(gameObject);
-        SceneManager.LoadScene("Start");
+        SceneManager.LoadScene("Closing");
 
     }
 }

@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Opening.unity
+    guid: a828d8f986bc844b6a5ccd521687779b
+  - enabled: 1
     path: Assets/Scenes/Start.unity
     guid: 3bd18f47dbde2354ca84405e979a259d
   - enabled: 1
@@ -23,6 +26,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BossFight_Hard.unity
     guid: 4dba1fc3dc8af4c0e8bf08fc92333e06
+  - enabled: 1
+    path: Assets/Scenes/Closing.unity
+    guid: f49ef0b185e4d4fc3b83bed5343fabc5
   - enabled: 1
     path: Assets/Scenes/Stage1_Hard.unity
     guid: f1170a73db1164fc9bb706a0679a7545

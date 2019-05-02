@@ -28813,7 +28813,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c84c0a2d0a9f0a4997c3b2b373b5911, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 10
+  maxHealth: 1
   startTimeBtwShot: 4
   projectile: {fileID: 9045533769037193375, guid: eb72b10c442339247b3efda053ec2bfb,
     type: 3}
@@ -31733,7 +31733,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c84c0a2d0a9f0a4997c3b2b373b5911, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 5
+  maxHealth: 1
   startTimeBtwShot: 6
   projectile: {fileID: 9045533769037193375, guid: eb72b10c442339247b3efda053ec2bfb,
     type: 3}
