@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class CharacterHealth : MonoBehaviour
 {
@@ -47,29 +48,64 @@ public class CharacterHealth : MonoBehaviour
                 hearts[i].enabled = false;
             }
         }
+
+
+        if(health == 0)
+        {
+            //GameObject p = GameObject.Find("Player");
+            //PlayerMovement pm = p.GetComponent<PlayerMovement>();
+            //if (!p)
+            //{
+            //    p = GameObject.Find("Player_2");
+            //}
+            //pm.Die();
+            //animator.SetBool("Dead", true);
+            //rb.velocity = Vector2.zero;
+
+            //StartCoroutine(wait());
+        }
     }
 
     public void TakeDamage(int damage, Vector3 position)
     {
-        health -= damage;
-        GameObject p = GameObject.Find("Player");
-        if (!p)
+        if(health > 0)
         {
-            p = GameObject.Find("Player_2");
+            health -= damage;
+            GameObject p = GameObject.Find("Player");
+            if (!p)
+            {
+                p = GameObject.Find("Player_2");
+            }
+            rb = p.GetComponent<Rigidbody2D>();
+            PlayerMovement pm = p.GetComponent<PlayerMovement>();
+            if (health == 0)
+            {
+                animator.SetBool("Dead", true);
+                pm.alive = false;
+                StartCoroutine(wait());
+            }
+
+            if (position.x > rb.transform.position.x)
+                rb.AddForce(Vector2.left * 1500);
+            //p.transform.position = Vector2.Lerp(p.transform.position, new Vector2(p.transform.position.x - 3, p.transform.position.y), 0.25f);
+            else if (position.x < rb.transform.position.x)
+                rb.AddForce(Vector2.right * 1500);
+            animator.SetBool("Hurt", true);
+            StartCoroutine(gotHurt());
         }
-        rb = p.GetComponent<Rigidbody2D>();
-        if(position.x > rb.transform.position.x)
-            rb.AddForce(Vector2.left * 1500);
-        //p.transform.position = Vector2.Lerp(p.transform.position, new Vector2(p.transform.position.x - 3, p.transform.position.y), 0.25f);
-        else if(position.x < rb.transform.position.x)
-            rb.AddForce(Vector2.right * 1500);
-        animator.SetBool("Hurt", true);
-        StartCoroutine(gotHurt());
     }
 
     IEnumerator gotHurt()
     {
         yield return new WaitForSeconds(0.5f);
         animator.SetBool("Hurt", false);
+    }
+
+    IEnumerator wait()
+    {
+        yield return new WaitForSeconds(0.6f);
+        animator.SetBool("death", true);
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene("Tutorial");
     }
 }
