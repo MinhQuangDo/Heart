@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Enemy_Boss : MonoBehaviour
 {
@@ -15,7 +16,7 @@ public class Enemy_Boss : MonoBehaviour
     public GameObject projectile;
     public Transform shotPoint;
     private Animator animator;
-
+    public int dif;
     GameObject player;
 
     public Image[] hearts;
@@ -56,6 +57,7 @@ public class Enemy_Boss : MonoBehaviour
                 StartCoroutine(boss1End());
             if(GameObject.Find("Boss2"))
                 StartCoroutine(boss2End());
+            // Debug.Log("lol");
         }
         else
         {
@@ -146,6 +148,9 @@ public class Enemy_Boss : MonoBehaviour
     IEnumerator boss2End()
     {
         yield return new WaitForSeconds(1f);
+        Debug.Log("destroyed");
         Destroy(gameObject);
+        SceneManager.LoadScene("Start");
+
     }
 }

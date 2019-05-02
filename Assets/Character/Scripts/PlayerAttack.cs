@@ -10,6 +10,8 @@ public class PlayerAttack : MonoBehaviour
     private float timeBtwAttack;
     public float startTimeBtwAttack;
 
+    public AudioSource audioSource;
+    public AudioClip collisionSoundClip;
     public Transform attackPos;
     public LayerMask WhatIsEnemies;
     public float attackRange;
@@ -18,7 +20,7 @@ public class PlayerAttack : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -29,7 +31,8 @@ public class PlayerAttack : MonoBehaviour
             if(Input.GetButtonDown("Attack"))
             {
                 animator.SetBool("Sword", true);
-                
+                audioSource.PlayOneShot(collisionSoundClip);
+
                 StartCoroutine(attacking());
 
                 Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, WhatIsEnemies);
@@ -65,7 +68,7 @@ public class PlayerAttack : MonoBehaviour
 
                 timeBtwAttack = startTimeBtwAttack;
             }
-            
+
         }
         else
         {

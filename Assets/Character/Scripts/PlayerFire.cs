@@ -7,6 +7,8 @@ public class PlayerFire : MonoBehaviour
     public GameObject projectile;
     public Transform shotPoint;
 
+    public AudioSource audioSource;
+    public AudioClip collisionSoundClip;
     private float timeBtwShots;
     public float startTimeBtwShots;
 
@@ -16,6 +18,8 @@ public class PlayerFire : MonoBehaviour
         {
             if(Input.GetKeyDown(KeyCode.Space))
             {
+                audioSource.PlayOneShot(collisionSoundClip);
+
                 if(transform.localScale.x < 0)
                 {
                     Instantiate(projectile, shotPoint.position, Quaternion.Euler(0, 0, 180));

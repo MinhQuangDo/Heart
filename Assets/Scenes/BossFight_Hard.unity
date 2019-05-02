@@ -454,6 +454,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 280331924}
   startTimeBtwAttack: 0.5
+  audioSource: {fileID: 0}
+  collisionSoundClip: {fileID: 0}
   attackPos: {fileID: 1000581433}
   WhatIsEnemies:
     serializedVersion: 2
@@ -30811,6 +30813,7 @@ MonoBehaviour:
   projectile: {fileID: 9045533769037193375, guid: eb72b10c442339247b3efda053ec2bfb,
     type: 3}
   shotPoint: {fileID: 1020709112}
+  diff: 1
   hearts:
   - {fileID: 636116435}
   - {fileID: 782813051}
@@ -32426,6 +32429,7 @@ MonoBehaviour:
   projectile: {fileID: 9045533769037193375, guid: eb72b10c442339247b3efda053ec2bfb,
     type: 3}
   shotPoint: {fileID: 1822767040}
+  diff: 1
   hearts:
   - {fileID: 636116435}
   - {fileID: 782813051}
@@ -32455,6 +32459,8 @@ MonoBehaviour:
   projectile: {fileID: 9045533769037193375, guid: eb72b10c442339247b3efda053ec2bfb,
     type: 3}
   shotPoint: {fileID: 1822767040}
+  audioSource: {fileID: 0}
+  collisionSoundClip: {fileID: 0}
   startTimeBtwShots: 0.6
 --- !u!114 &2048636713
 MonoBehaviour:
