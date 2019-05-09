@@ -42,6 +42,21 @@ EditorBuildSettings:
     path: Assets/Scenes/BossFight_Hard.unity
     guid: 4dba1fc3dc8af4c0e8bf08fc92333e06
   - enabled: 1
+    path: Assets/Scenes/Opening_Medium.unity
+    guid: d041a29f928b14e8d9d3ae3481cf4b33
+  - enabled: 1
+    path: Assets/Scenes/Tutorial_Medium.unity
+    guid: 90ee59e506d69425f93af7d361530f59
+  - enabled: 1
+    path: Assets/Scenes/Stage1_Medium.unity
+    guid: 540cf020356dc49fa974ad592dba08c7
+  - enabled: 1
+    path: Assets/Scenes/Stage2_Medium.unity
+    guid: b12eff08a8f9b435a9181e859d64ce68
+  - enabled: 1
+    path: Assets/Scenes/BossFight_Medium.unity
+    guid: a5a5149c291434b808e8cb58de0ca45c
+  - enabled: 1
     path: Assets/Scenes/End.unity
     guid: 40997b91aa63348c79352c5fb5495aa7
   m_configObjects: {}

@@ -12,7 +12,12 @@ public class MainMene : MonoBehaviour
 
     public void playGameHard()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 6);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 7);
+    }
+
+    public void playGameMedium()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +12);
     }
 
     public void QuitGame()
