@@ -7,17 +7,17 @@ public class MainMene : MonoBehaviour
 {
     public void playGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene("Opening");
     }
 
     public void playGameHard()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 7);
+        SceneManager.LoadScene("Opening_Hard");
     }
 
     public void playGameMedium()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +12);
+        SceneManager.LoadScene("Opening_Medium");
     }
 
     public void QuitGame()

@@ -907,6 +907,7 @@ MonoBehaviour:
     - '... Wizard and Sword Master!'
     - '... Used them wisely, the Chosen One!'
     - '... Be yourself!'
+  nextScene: Tutorial_Hard
 --- !u!4 &1470777645
 Transform:
   m_ObjectHideFlags: 0

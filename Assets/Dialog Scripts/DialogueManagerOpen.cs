@@ -12,6 +12,7 @@ public class DialogueManagerOpen : MonoBehaviour
     public Dialogue dialogue;
 
     private Queue<string> sentences;
+    public string nextScene;
 
     // Use this for initialization
     void Start()
@@ -65,8 +66,7 @@ public class DialogueManagerOpen : MonoBehaviour
 
     void EndDialogue()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-
+        SceneManager.LoadScene(nextScene);
     }
 
 }

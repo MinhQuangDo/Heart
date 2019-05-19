@@ -151,6 +151,5 @@ public class Enemy_Boss : MonoBehaviour
         Debug.Log("destroyed");
         Destroy(gameObject);
         SceneManager.LoadScene("Closing");
-
     }
 }

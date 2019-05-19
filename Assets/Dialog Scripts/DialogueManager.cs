@@ -63,8 +63,7 @@ public class DialogueManager : MonoBehaviour {
 
 	void EndDialogue()
 	{
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 6);
-
+        SceneManager.LoadScene("End");
 	}
 
 }

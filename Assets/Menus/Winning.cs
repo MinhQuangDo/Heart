@@ -7,12 +7,12 @@ public class Winning : MonoBehaviour
 {
     public void playAgain()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 5);
+        SceneManager.LoadScene("Opening_Hard");
     }
 
     public void BacktoMenu()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 12);
+        SceneManager.LoadScene("Start");
     }
 
     public void QuitGame()
