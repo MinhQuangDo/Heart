@@ -1,3 +1,0 @@
--   The health got reset to max when u pass a stage
--   Boss AI needs to be implemented
--   Enemy Health Bar
